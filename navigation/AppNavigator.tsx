@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../app/(tabs)/HomeScreen';
 import TabNavigator from '../app/(tabs)/_layout';
-
+import Bookings from '@/app/(tabs)/bookings';
 
 const Stack = createStackNavigator();
 

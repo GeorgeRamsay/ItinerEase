@@ -22,5 +22,30 @@ export const useHomeScreenStyles = () => {
     primaryColor_Blue: {
       color: theme.primaryColor_Blue,
     },
+
+
+    headerContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: 8,
+        marginTop: 32,
+      },
+      viewAllButton: {
+        padding: 8,
+        paddingLeft: 16,
+        paddingRight: 16,
+        backgroundColor: theme.primaryStandoutColor,
+        borderRadius: 8,
+      },
+      viewAllText: {
+        color: theme.primaryColor_Mild,
+
+        fontSize: 16,
+      },
+
+
+
+
   });
 };

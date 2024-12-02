@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
-
+import { View, Text, Button, StyleSheet, TouchableOpacity } from 'react-native';
+import { useBookingCardStyles,  } from '../../styles/BookingsHomeCardStyles';
 interface BookingsHomeCardProps {
   title: string;
   dateRange: string;
@@ -9,33 +9,20 @@ interface BookingsHomeCardProps {
 }
 
 const BookingsHomeCard: React.FC<BookingsHomeCardProps> = ({ title, dateRange, address, onViewPress }) => {
+  const styles = useBookingCardStyles();
+  
   return (
     <View style={styles.card}>
-      <Text style={styles.title}>{title}</Text>
-      <Text>{dateRange}</Text>
-      <Text>{address}</Text>
-      <Button title="View" onPress={onViewPress} />
+
+      <Text style={styles.title} numberOfLines={1} ellipsizeMode="tail">{title}</Text>
+      <Text style={styles.content} numberOfLines={1} ellipsizeMode="tail">{dateRange}</Text>
+      <Text style={styles.content} numberOfLines={1} ellipsizeMode="tail">{address}</Text>
+      <TouchableOpacity style={styles.button} onPress={onViewPress}>
+        <Text style={styles.buttonText}>View</Text>
+      </TouchableOpacity>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  card: {
-    padding: 16,
-    margin: 16,
-    backgroundColor: '#fff',
-    borderRadius: 8,
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowRadius: 10,
-    shadowOffset: { width: 0, height: 5 },
-    elevation: 3,
-  },
-  title: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginBottom: 8,
-  },
-});
 
 export default BookingsHomeCard;

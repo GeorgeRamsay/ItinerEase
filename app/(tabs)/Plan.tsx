@@ -1,11 +1,13 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
 import BookingsHomeCard from '../../components/cards/BookingsHomeCard';
+import { usePlanStyles } from '../../styles/PlanStyles';
 
 export default function Plan() {
+  const styles = usePlanStyles();
   return (
-    <View style={styles.container}>
-      <Text style={[styles.title, styles.primaryColor_Green]}>Plan</Text>
+    <View style={styles.page}>
+      <Text style={[styles.title]}> Your Plan</Text>
 
 
 
@@ -13,45 +15,3 @@ export default function Plan() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 24,
-    backgroundColor: '#eaeaea',
-  },
-  title: {
-    marginTop: 16,
-    paddingVertical: 8,
-
-
-    textAlign: 'left',
-    fontSize: 30,
-    fontWeight: 'bold',
-  },
-  primaryColor_Green:
-  {
-    color: '#1E412D'
-  },
-  primaryColor_Blue:
-  {
-    color: '#465F6E'
-  },
-  primaryColor_Mild:
-  {
-    color: '#F2E8DB'
-  },
-  secondaryColor_Green_Light:
-  {
-    color: '#719B7F'
-
-  },
-  secondaryColor_Green_Dark:
-  {
-    color: '#5A846A'
-  },
-  primaryStandoutColor:
-  {
-    color: '#DE7B44'
-  },
-
-});
