@@ -1,7 +1,7 @@
 import {StyleSheet } from 'react-native';
 
 
-export const home = StyleSheet.create({
+export const plan = StyleSheet.create({
 
 
 
