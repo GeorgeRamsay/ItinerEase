@@ -11,13 +11,22 @@ export const usePlanStyles  = () => {
         paddingTop: 74,
     },
     title: {
-        marginTop: 16,
-        paddingVertical: 8,
         color: theme.primaryColor_Green,
     
         textAlign: 'left',
         fontSize: 30,
         fontWeight: 'bold',
+    },
+    header: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: 8,
+        marginTop: 32,
+    },
+    iconGroup: {
+        flexDirection: 'row',
+        gap: 16,    
     },
 
 });
