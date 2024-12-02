@@ -17,7 +17,7 @@ export default function HomeScreen() {
       <Text style={[styles.title, styles.primaryColor_Green]}>Hi George</Text>
       <Text style={styles.primaryColor_Blue}>Find your Destinations Today!</Text>
       <View style={styles.headerContainer}>
-        <Text style={[styles.title, styles.primaryColor_Green]}>Today's Bookings</Text>
+        <Text style={[styles.title, styles.primaryColor_Green]}>Nearest Bookings</Text>
         <TouchableOpacity style={styles.viewAllButton} onPress={() => navigation.navigate('bookings')}>
           <Text style={styles.viewAllText}>View All →</Text>
         </TouchableOpacity>
