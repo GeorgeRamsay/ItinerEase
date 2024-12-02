@@ -1,15 +1,17 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
 import BookingsHomeCard from '../../components/cards/BookingsHomeCard';
-import { generalStyle } from '../../styles/generalStyle'; // Ensure the correct import path
+import { useHomeScreenStyles } from '../../styles/HomeScreenStyles';
 
 
 export default function HomeScreen() {
+  const styles = useHomeScreenStyles();
+
   return (
-    <View style={generalStyle.container}>
-      <Text style={[generalStyle.title, generalStyle.primaryColor_Green]}>Hi George</Text>
-      <Text style={[ generalStyle.primaryColor_Blue]}>Find your Destinations Today!</Text>
-      <Text style={[generalStyle.title, generalStyle.primaryColor_Green]}>Today's Bookings</Text>
+    <View style={styles.container}>
+      <Text style={[styles.title, styles.primaryColor_Green]}>Hi George</Text>
+      <Text style={styles.primaryColor_Blue}>Find your Destinations Today!</Text>
+      <Text style={[styles.title, styles.primaryColor_Green]}>Today's Bookings</Text>
 
       <BookingsHomeCard
         title="Hotel"
